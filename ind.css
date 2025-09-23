@@ -39,7 +39,7 @@
         
         .main-category-icon {
             width: 100%;
-            height: 150px;
+            height: 250px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -50,7 +50,7 @@
 
         .main-category-icon img {
             width: 100%;
-            height: 100%;
+            height: 150%;
             object-fit: cover;
             border-radius: 5px;
         }
@@ -226,4 +226,8 @@
 
 
 
+
+
+
         
+
