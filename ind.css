@@ -199,11 +199,11 @@
             }
             
             .main-category-icon {
-                height: 120px;
+                height: 250px;
             }
             
             .category-icon {
-                height: 100px;
+                height: 250px;
             }
         }
         
@@ -221,6 +221,7 @@
                 padding: 12px;
             }
         }
+
 
 
 
