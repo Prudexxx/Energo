@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ООО «ГеоЭлектроСнаб»</title>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="ind.css">
+    <link rel="stylesheet" href="osnova.css">
+   
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="ЛОго.png" alt="ГеоЭлектроСнаб">
+                </div>
+                <h3>ГеоЭлектроСнаб</h3>
+            </div>
+            <div class="contact-info">
+                <div class="contact-details">
+                    <p>+7 (996) 083-19-23</p>
+                    <p>av.bannov@gmail.com</p>
+                </div>
+               
+                <a href="tel:+79960831923" class="call-button">Позвонить</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#products">Продукция</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#process">Процесс заказа</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="#form">Оставить заявку</a></li>
+        </ul>
+    </nav>
+</header>
+    <!-- Мобильное меню-шторка -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#products">Продукция</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#process">Процесс заказа</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="#form">Оставить заявку</a></li>
+        </ul>
+        <div class="mobile-contact">
+            <p>+7 (996) 083-19-23</p>
+            <p>av.bannov@gmail.com</p>
+            <a href="tel:+79960831923" class="call-button">Позвонить</a>
+        </div>
+    </div>
+
+    <section id="products">
+       <div class="container1">
+        <h1>Каталог продукции</h1>
+        
+        <button class="back-button" id="backToCategories">← Назад к категориям</button>
+        <button class="back-button" id="backToMain">← Назад к основным категориям</button>
+        
+        <div class="main-categories" id="mainCategories">
+            <div class="main-category-card" onclick="showCategories('cables')">
+                <div class="main-category-icon">
+                    <img src="Кабельно-проводниковая продукция и муфты.jpg" alt="Кабели" >
+                </div>
+                <div class="main-category-name">Кабельно-проводниковая продукция и муфты</div>
+                <div class="main-category-desc">Широкий выбор кабельной продукции для различных применений</div>
+                <div class="category-count">8 категорий</div>
+            </div>
+            
+            <div class="main-category-card" onclick="showCategories('accessories')">
+                <div class="main-category-icon">
+                    <img src="ГеосМАт.jpg" alt="Геосинтетические материалы" >
+                </div>
+                <div class="main-category-name">Геосинтетические материалы</div>
+                <div class="main-category-desc">Используются в строительстве и инженерных сооружениях для укрепления, разделения, фильтрации и защиты грунтовых оснований.</div>
+                <div class="category-count">12 категорий</div>
+            </div>
+        </div>
+        
+        <div class="categories-grid" id="cablesCategories">
+            <div class="category-card" onclick="showProducts('Силовые кабели')">
+                <div class="category-icon">
+                    <img src="силовой кабель.jpg" alt="Силовые кабели">
+                </div>
+                <div class="category-name">Силовые кабели</div>
+                <div class="category-desc">Широкий выбор силовых кабелей для передачи электроэнергии</div>
+                <div class="category-count">23 продукта</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('Контрольные кабели')">
+                <div class="category-icon">
+                    <img src="контрольный кабель.jpg" alt="Контрольные кабели" >
+                </div>
+                <div class="category-name">Контрольные кабели</div>
+                <div class="category-desc">Кабели для систем контроля и управления</div>
+                <div class="category-count">20 продуктов</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('Монтажные кабели')">
+                <div class="category-icon">
+                    <img src="Монтажный кабель.jpg" alt="Монтажные кабели" >
+                </div>
+                <div class="category-name">Монтажные кабели</div>
+                <div class="category-desc">Специализированные кабели для монтажных работ</div>
+                <div class="category-count">30 продуктов</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('Универсальные кабели')">
+                <div class="category-icon">
+                    <img src="Универсальный кабель.jpg" alt="Универсальные кабели" >
+                </div>
+                <div class="category-name">Универсальные кабели</div>
+                <div class="category-desc">Многофункциональные кабели для различных применений</div>
+                <div class="category-count">20 продуктов</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('Кабели КГЭ')">
+                <div class="category-icon">
+                    <img src="кгт кабель.jpg" alt="Кабели КГЭ" >
+                </div>
+                <div class="category-name">Кабели КГЭ</div>
+                <div class="category-desc">Для подключения передвижных механизмов и оборудования</div>
+                <div class="category-count">9 продуктов</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('Провода СИП')">
+                <div class="category-icon">
+                    <img src="Cип.jpg" alt="Провода СИП" >
+                </div>
+                <div class="category-name">Провода СИП</div>
+                <div class="category-desc">Подходят и для воздушных линий, и для прокладки по стенам сооружений</div>
+                <div class="category-count">4 продукта</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('Муфты и коннекторы')">
+                <div class="category-icon">
+                    <img src="Муфты.jpg" alt="Муфты и коннекторы" >
+                </div>
+                <div class="category-name">Муфты </div>
+                <div class="category-desc">Соединительные элементы для кабельных систем</div>
+                <div class="category-count">43 продукта</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('Муфты металлорукав')">
+                <div class="category-icon">
+                    <img src="МуфтыМет.jpg" alt="Муфты металлические" >
+                </div>
+                <div class="category-name">Муфты металлорукав</div>
+                <div class="category-desc">Соединительные элементы для трубных систем</div>
+                <div class="category-count">27 продуктов</div>
+            </div>
+        </div>
+        
+        <div class="categories-grid" id="accessoriesCategories">
+            <div class="category-card" onclick="showProducts('Габионы')">
+                <div class="category-icon">
+                    <img src="Гобелен.jpg" alt="Габионы">
+                </div>
+                <div class="category-name">Габионы</div>
+                <div class="category-desc">Для создания ответвлений в кабельных линиях</div>
+                <div class="category-count">6 продуктов</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('ДРЕНАЖНЫЕ ГЕОКОМПОЗИТЫ ')">
+                <div class="category-icon">
+                    <img src="Дренажные композиты.jpg" alt="ДРЕНАЖНЫЕ ГЕОКОМПОЗИТЫ " >
+                </div>
+                <div class="category-name">ДРЕНАЖНЫЕ ГЕОКОМПОЗИТЫ </div>
+                <div class="category-desc">Для оконцевания кабельных линий</div>
+                <div class="category-count">3 продукта</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('БЕНТОНИТОВЫЕ МАТЫ ')">
+                <div class="category-icon">
+                    <img src="БентоМаты.jpg" alt="БЕНТОНИТОВЫЕ МАТЫ " >
+                </div>
+                <div class="category-name">БЕНТОНИТОВЫЕ МАТЫ </div>
+                <div class="category-desc">Для соединения участков кабельных линий</div>
+                <div class="category-count">2 продукта</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('БИОМАТЫ')">
+                <div class="category-icon">
+                    <img src="Биоматы.jpg" alt="БИОМАТЫ " >
+                </div>
+                <div class="category-name">БИОМАТЫ </div>
+                <div class="category-desc">Для перехода между разными типами кабелей</div>
+                <div class="category-count">5 продуктов</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('ГЕОМАТЫ')">
+                <div class="category-icon">
+                    <img src="Геомат.jpg" alt="ГЕОМАТЫ" >
+                </div>
+                <div class="category-name">ГЕОМАТЫ</div>
+                <div class="category-desc">Разъемные соединения для кабельных систем</div>
+                <div class="category-count">6 продуктов</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('ГЕОМЕМБРАНА ПРОФИЛИРОВАННАЯ')">
+                <div class="category-icon">
+                    <img src="Геомембрана.jpg" alt="ГЕОМЕМБРАНА ПРОФИЛИРОВАННАЯ" >
+                </div>
+                <div class="category-name">ГЕОМЕМБРАНА ПРОФИЛИРОВАННАЯ</div>
+                <div class="category-desc">Для подключения кабелей к оборудованию</div>
+                <div class="category-count">5 продуктов</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('ГЕОМЕМБРАНА ')">
+                <div class="category-icon">
+                    <img src="Геомемб.jpg" alt="ГЕОМЕМБРАНА ">
+                </div>
+                <div class="category-name">ГЕОМЕМБРАНА </div>
+                <div class="category-desc">Для соединения проводников</div>
+                <div class="category-count">9 продуктов</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('ГЕОСЕТКА ДЛЯ АСФАЛЬТОБЕТОННА')">
+                <div class="category-icon">
+                    <img src="ГЕОСЕТКА.jpg" alt="ГЕОСЕТКА ДЛЯ АСФАЛЬТОБЕТОННА" >
+                </div>
+                <div class="category-name">ГЕОСЕТКА ДЛЯ АСФАЛЬТОБЕТОННА</div>
+                <div class="category-desc">Для изоляции соединений и мест повреждения</div>
+                <div class="category-count">16 продуктов</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('ГЕОРЕШЕТКА ')">
+                <div class="category-icon">
+                    <img src="ГЕОРЕШЕтка.jpg" alt="ГЕОРЕШЕТКА " >
+                </div>
+                <div class="category-name">ГЕОРЕШЕТКА </div>
+                <div class="category-desc">Для защиты кабельных соединений от внешних воздействий</div>
+                <div class="category-count">18 продукта</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('ГЕОСЕТКА')">
+                <div class="category-icon">
+                    <img src="ГЕОСЕТКА.jpg" alt="ГЕОСЕТКА " >
+                </div>
+                <div class="category-name">ГЕОСЕТКА </div>
+                <div class="category-desc">Для фиксации кабелей и муфт</div>
+                <div class="category-count">28 продуктов</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('ГЕОТЕКСТИЛЬ ТКАНЫЙ')">
+                <div class="category-icon">
+                    <img src="ГЕОТЕКСТИЛЬ ТКАНЫЙ .jpg" alt="ГЕОТЕКСТИЛЬ ТКАНЫЙ " >
+                </div>
+                <div class="category-name">ГЕОТЕКСТИЛЬ ТКАНЫЙ </div>
+                <div class="category-desc">Для идентификации кабелей и соединений</div>
+                <div class="category-count">6 продуктов</div>
+            </div>
+            
+            <div class="category-card" onclick="showProducts('ГЕОТЕКСТИЛЬ НЕТКАНЫЙ')">
+                <div class="category-icon">
+                    <img src="ГЕОТЕКСТИЛЬ НЕТКАНЫЙ .jpg" alt="ГЕОТЕКСТИЛЬ НЕТКАНЫЙ " >
+                </div>
+                <div class="category-name">ГЕОТЕКСТИЛЬ НЕТКАНЫЙ </div>
+                <div class="category-desc">Специальный инструмент для монтажа аксессуаров</div>
+                <div class="category-count">12 продуктов</div>
+            </div>
+        </div>
+        
+        <div class="products-list" id="productsList"></div>
+    </div>
+    </section>
+
+        <section id="about">
+        <div class="container">
+            <h2>О компании</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>ООО «ГеоЭлектроСнаб» - надежный партнер в сфере поставок электрооборудования, кабельно-проводниковой продукции и геосинтетических материалов. Мы работаем на рынке с 2021 года и за это время зарекомендовали себя как ответственный поставщик качественной продукции.</p><br>
+                    <p>Наша компания специализируется на обеспечении промышленных предприятий, строительных компаний и  современным и надежными материалами. Мы понимаем, что от качества материалов зависит успех наших клиентов, поэтому тщательно отбираем продукцию от проверенных производителей.</p><br>
+                    <p>Наши специалисты всегда готовы проконсультировать вас и помочь с выбором материалов, которое наилучшим образом подойдет для решения ваших задач. Мы ценим долгосрочные партнерские отношения и предлагаем индивидуальный подход к каждому клиенту.</p><br>
+                    <p>Основные принципы нашей работы: качество продукции, соблюдение сроков поставок, конкурентные цены и профессиональное обслуживание.</p><br>
+                </div>
+                <div class="about-image">
+                  <img style="max-width: 100%;" src="фотоОФиса.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="geography">
+        <div class="container">
+            <h2>География наших заказов</h2>
+            <div class="geography">
+                <p>Мы осуществляем поставки оборудования по всей России, но основная география наших заказов сосредоточена в регионах ХМАО и ЯНАО, особенно в Якутии и на полуостров ЯМАЛ.</p><br>
+                
+                <div class="regions">
+                    <div class="region">
+                        <h3>Республика Саха (Якутия)</h3><br>
+                        <p>Мы активно сотрудничаем с промышленными и добывающими предприятиями Якутии, обеспечивая их надежным электрооборудованием и геодезическими приборами, которые выдерживают суровые климатические условия региона.</p>
+                    </div><br>
+                    <div class="region">
+                        <h3>ХМАО и ЯНАО</h3><br>
+                        <p>В этих регионах мы работаем с нефтегазовыми компаниями, строительными организациями, поставляя материалы, соответствующее самым строгим требованиям качества и безопасности.</p>
+                    </div><br>
+                </div>
+                
+                <p>Независимо от удаленности объекта, мы гарантируем своевременную доставку и профессиональную поддержку на всех этапах сотрудничества.</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="constructor"> <h4>География выпоненных  заказов</h4>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab3a4f2dcd8c928155c4dce1c8488845f57d2cf3e749ca5bee097582e316f1632&amp;width=1200&amp;height=523&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+       
+    </section>
+
+
+    <section id="process">
+        <div class="container">
+            <h2>Процесс от заказа до вручения</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Заявка</h3><br>
+                    <p>Оставляете заявку на сайте или по телефону</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Подтверждение</h3><br>
+                    <p>Наш менеджер связывается с вами для уточнения деталей</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Оплата</h3><br>
+                    <p>Выбираете удобный способ оплаты</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Доставка</h3><br>   
+                    <p>Мы быстро доставляем заказ в любую точку страны</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="reviews">
+    <div class="container">
+        <h2>Отзывы наших клиентов</h2>
+        <div class="reviews">
+                 <div class="review-card">
+                <h3>ИП Алканов А.К.</h3><br>
+            
+                <p>Рекомендую эту компанию как надежного поставщика. Заказывали силовой кабель для объекта. Менеджер помог с выбором, доставка была точно в срок, без задержек. Качество продукции отличное, все сертификаты предоставили. </p>
+                  <div class="stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+            </div>
+            <div class="review-card">
+                
+                <h3>ООО "АГАТ"</h3><br>
+          
+                <p>Заказывал электрооборудование для строительства. Все доставили быстро, качество продукции отличное. Спасибо!</p><br>
+          <br>
+          <br>
+          <br>
+          
+                  <div class="stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+            </div>
+            <div class="review-card">
+                <h3>ООО "ЮНИТРАСС"</h3><br>
+          
+                <p>Плодотворное сотрудничество на протяжении 3 лет. Всегда оперативные поставки и гибкие условия.</p><br>
+          <br>
+          <br>
+          <br>
+          
+                  <div class="stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+            </div>
+       
+        </div>
+    </div>
+</section>
+
+
+    <section id="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contact-content">
+                <div class="map-container">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7a14ceabe9aba9c3a947fee75d575b8eded99e25e1009326f7540f75fe34cd7d&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></iframe>
+                </div>
+                <div class="contact-details-section">
+                    <p><strong>Адрес:</strong> Улица Героев Хасана, 92, офис 406, 4 этаж; Пермь, 614025</p>
+                    <p><strong>Телефон:</strong> +7 (996) 083-19-23</p>
+                    <p><strong>Email:</strong> av.bannov@gmail.com</p>
+                    <p><strong>Режим работы:</strong> Пн-Пт: 9:00-18:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="form">
+        <div class="container">
+            <h2>Оставьте заявку</h2>
+            <form id="telegramForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>ООО «ГеоЭлектроСнаб» © 2023. Все права защищены.</p>
+        </div>
+    </footer>
+    
+
+        <script src="gambergerTelegr.js"></script>
+    <script src="ind.js"></script>
+</body>
+</html>
